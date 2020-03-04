@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+.moveDownG-enter {
+  transform: translateY(0rem);
+  position: relative;
+  z-index: 3;
+}
+.moveDownG-enter-active {
+  transform: translateY(5rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 3;
+}
+.moveDownG-exit {
+  transform: translateY(5rem);
+  position: relative;
+  z-index: 3;
+
+}
+.moveDownG-exit-active {
+  transform: translateY(0rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 3;
+
+}
+.moveDownY-enter {
+  transform: translateY(0rem);
+  position: relative;
+  z-index: 2;
+}
+.moveDownY-enter-active {
+  transform: translateY(5rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 2;
+}
+.moveDownY-exit {
+  transform: translateY(5rem);
+  position: relative;
+  z-index: 2;
+
+}
+.moveDownY-exit-active {
+  transform: translateY(0rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 2;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moveDownB-enter {
+  transform: translateY(0rem);
+  position: relative;
+  z-index: 1;
+}
+.moveDownB-enter-active {
+  transform: translateY(5rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 1;
+}
+.moveDownB-exit {
+  transform: translateY(5rem);
+  position: relative;
+  z-index: 1;
+
+}
+.moveDownB-exit-active {
+  transform: translateY(0rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.moveUpR-enter {
+  transform: translateY(0rem);
+  position: relative;
+  z-index: 4;
+}
+.moveUpR-enter-active {
+  transform: translateY(-10rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 4;
+}
+.moveUpR-exit {
+  transform: translateY(-5rem);
+  position: relative;
+  z-index: 4;
+
+}
+.moveUpR-exit-active {
+  transform: translateY(0rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.moveUpG-enter {
+  transform: translateY(0rem);
+  position: relative;
+  z-index: 3;
+}
+.moveUpG-enter-active {
+  transform: translateY(-5rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 3;
+}
+.moveUpG-exit {
+  transform: translateY(-5rem);
+  position: relative;
+  z-index: 3;
+
+}
+.moveUpG-exit-active {
+  transform: translateY(0rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 3;
 }
 
-.App-link {
-  color: #61dafb;
+.moveUpY-enter {
+  transform: translateY(0rem);
+  position: relative;
+  z-index: 2;
+}
+.moveUpY-enter-active {
+  transform: translateY(-5rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 2;
+}
+.moveUpY-exit {
+  transform: translateY(-5rem);
+  position: relative;
+  z-index: 2;
+
+}
+.moveUpY-exit-active {
+  transform: translateY(0rem);
+  transition:  transform 500ms;
+  position: relative;
+  z-index: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

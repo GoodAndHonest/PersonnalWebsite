@@ -1,0 +1,279 @@
+.fullscreenVideoWrap{
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
+.mainContent{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.description{
+    margin-top:3rem;
+    margin-left:8rem;
+}
+.nameText{
+    color:black;
+    font-family: 'mrs saint delafield';
+    font-size: 5rem;
+}
+.titleText{
+    font-style: italic;
+    font-family: 'Roboto';
+    color:black;
+    font-size: 2.5rem;
+}
+.descriptionText{
+    font-style: italic;
+    color:black;
+    font-size: 1.5rem;
+}
+.descriptionWrap{
+    margin-top: 3rem;
+}
+.icons{
+    width: 10rem;
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 5rem;
+}
+.line{
+    margin-top: 2rem;
+    border-top:2px solid black;
+    width: 40rem;
+}
+    @keyframes loop1infinite{
+    0% {transform: translateY(-0.03rem); position: relative; z-index: 4;}
+    25% {transform: translateY(0.15rem); position: relative; z-index: 4;}
+    50% {transform: translateY(-0.10rem); position: relative; z-index: 4;}
+    75% {transform: translateY(0.5rem); position: relative; z-index: 4;}
+    100% {transform: translateY(-0.03rem); position: relative; z-index: 4;}
+    }
+
+    @keyframes div1 {
+    0%   {transform: translateY(-9rem); position: relative; z-index: 4;}
+    75%  {transform: translateY(0.5rem); position: relative; z-index: 4;}
+    100% {transform: translateY(0rem); position: relative; z-index: 4;} 
+    }
+    @keyframes loop2infinite{
+        0% {transform: translateY(-0.03rem); position: relative; z-index: 3;}
+        25% {transform: translateY(0.15rem); position: relative; z-index: 3;}
+        50% {transform: translateY(-0.10rem); position: relative; z-index: 3;}
+        75% {transform: translateY(0.5rem); position: relative; z-index: 3;}
+        100% {transform: translateY(-0.03rem); position: relative; z-index: 3;}
+    }
+    
+  @keyframes div2 {
+    0%   {transform: translateY(-9rem);position: relative; z-index: 3;}
+    75%  {transform: translateY(0.5rem); position: relative; z-index: 3;}
+    100% {transform: translateY(0rem); position: relative; z-index: 3;}
+  }
+  @keyframes loop3infinite{
+    0% {transform: translateY(-0.03rem); position: relative; z-index: 2;}
+    25% {transform: translateY(0.15rem); position: relative; z-index: 2;}
+    50% {transform: translateY(-0.10rem); position: relative; z-index: 2;}
+    75% {transform: translateY(0.5rem); position: relative; z-index: 2;}
+    100% {transform: translateY(-0.03rem); position: relative; z-index: 2;}
+}
+  @keyframes div3 {
+    0%   {transform: translateY(-9rem); position: relative;z-index: 2;}
+    75%  {transform: translateY(0.5em); position: relative; z-index: 2;}
+    100% {transform: translateY(0rem); position: relative; z-index: 2;}
+  }
+  @keyframes loop4infinite{
+    0% {transform: translateY(-0.03rem); position: relative; z-index: 1;}
+    25% {transform: translateY(0.15rem); position: relative; z-index: 1;}
+    50% {transform: translateY(-0.10rem); position: relative; z-index: 1;}
+    75% {transform: translateY(0.5rem); position: relative; z-index: 1;}
+    100% {transform: translateY(-0.03rem); position: relative; z-index: 1;}
+}
+  @keyframes div4 {
+    0%   {transform: translateY(-9rem); position: relative; z-index:1;}
+    75%  {transform: translateY(0.5rem); position: relative; z-index: 1;}
+    100% {transform: translateY(0rem); position: relative; z-index: 1;}
+  }
+.mainDiv1{
+    animation: 
+    div1 4s ,
+    loop1infinite 10s 4s infinite ;
+    transition: 1s;
+}
+.mainDiv1:hover{
+    padding-bottom:3rem;
+    transition: 0.5s;
+    cursor:pointer;
+}
+.mainDiv2{
+    animation: 
+    div2 3s ,
+    loop2infinite 10s 3s infinite ;
+    margin-top: -3rem;
+    transition: 1s;
+}
+.mainDiv2:hover{
+    padding-bottom:4rem;
+    transition: 0.5s;
+    padding-top:4rem;
+    cursor:pointer;
+}
+.mainDiv3:hover{
+    padding-bottom:4rem;
+    transition: 0.5s;
+    padding-top:4rem;
+    cursor:pointer;
+}
+.mainDiv3{
+    animation: 
+    div3 2s ,
+    loop3infinite 10s 2s infinite ;
+    margin-top: -3rem;
+    transition: 1s;
+}
+.mainDiv4{
+    animation: 
+    div4 1s ,
+    loop4infinite 10s 1s infinite ;
+    transition: 1s;
+    margin-top: -3rem;
+}
+.mainDiv4:hover{
+    padding-bottom:3rem;
+    transition: 0.5s;
+    padding-top:3rem;
+    cursor:pointer;
+}
+.description{
+    order: 0; 
+}
+.stack{
+    display:inline-grid;
+    grid-template-columns: 80% 20%;
+    margin-top: 10rem;
+    padding-left: 10rem;
+    order: 1; 
+}
+.squarered1{
+    width:150px;
+    height:40px;
+    background:#ED5050;
+    border:solid 1px #FA9F9F;
+    transform: skew(180deg,210deg);
+    position: relative;
+    z-index: 4;
+}
+.squarered2{
+    width:150px;
+    height:40px;
+    background:#BC1A1A;
+    border:solid 1px #FA9F9F;
+    transform: skew(180deg,150deg);
+    position: relative;
+    z-index: 4;
+}
+.squarered3{
+    width:174px;
+    height:150px;
+    background:#F35657;
+    border:solid 1px #FA9F9F;
+    margin-bottom: -3rem;
+    transform: rotate(150deg) translate(-63px, -17px) skew(30deg, 0deg);
+    position: relative;
+    z-index: 4;
+
+}
+.bottomSeperator{
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+}
+.squaregreen1{
+    width:150px;
+    height:40px;
+    background:#005D21;
+    border:solid 1px #00B77B;
+    transform: skew(180deg,210deg);
+    position: relative;
+    z-index: 2;
+}
+.squaregreen2{
+  width:150px;
+  height:40px;
+  background:#005D21;
+  border:solid 1px #00B77B;
+  transform: skew(180deg,150deg);
+  position: relative;
+  z-index: 2;
+} 
+.squaregreen3{
+    width:174px;
+    height:150px;
+    background:#005D21;
+    border:solid 1px #00B77B;
+    margin-bottom: -3rem;
+    margin-left: 0.4px;
+    transform: rotate(150deg) translate(-63px, -17px) skew(30deg, 0deg);
+    position: relative;
+    z-index: 2;
+}
+.squareBlue1{
+    width:150px;
+    height:40px;
+    background:#1F8BD1;
+    border:solid 1px #1C82CF;
+    transform: skew(180deg,210deg);
+    position: relative;
+}
+.squareBlue2{
+  width:150px;
+  height:40px;
+  background:#054796;
+  border:solid 1px #1C82CF;
+  transform: skew(180deg,150deg);
+  position: relative;
+
+}
+.squareBlue3{
+    width:174px;
+    height:150px;
+    background:#1C82CF;
+    border:solid 1px #1C82CF;
+    margin-bottom: -3rem;
+    margin-left: 0.4px;
+    transform: rotate(150deg) translate(-63px, -17px) skew(30deg, 0deg);
+    position: relative;
+}
+.squareYellow1{
+    width:150px;
+    height:40px;
+    background:#F5C547;
+    border:solid 1px #E09945;
+    transform: skew(180deg,210deg);
+    position: relative;
+    z-index: 1;
+}
+.squareYellow2{
+  width:150px;
+  height:40px;
+  background:#E09945;
+  border:solid 1px #E09945;
+  transform: skew(180deg,150deg);
+  position: relative;
+  z-index: 1;
+}
+.squareYellow3{
+    width:174px;
+    height:150px;
+    background:#F5C547;
+    border:solid 1px #F5C547;
+    margin-bottom: -3rem;
+    margin-left: 0.4px;
+    transform: rotate(150deg) translate(-63px, -17px) skew(30deg, 0deg);
+    position: relative;
+    z-index: 1;
+}
