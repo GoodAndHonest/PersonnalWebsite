@@ -28,6 +28,8 @@
     "react-scripts": "3.4.0",
     "react-tooltip": "^4.0.3",
     "react-transition-group": "^4.3.0",
+    "semantic-ui-react": "^0.88.2",
+    "typeface-caveat": "0.0.76",
     "typeface-mrs-saint-delafield": "0.0.71",
     "typeface-roboto": "0.0.75",
     "typescript": "^3.7.5"

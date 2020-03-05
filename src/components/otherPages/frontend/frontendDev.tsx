@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import styles from './frontendev.module.css'
 export interface IFrontendDevProps {
 }
 
@@ -17,7 +17,12 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
   public render() {
     return (
       <div>
-        
+        <div className={styles.firstDiv}>
+            <h1></h1>
+        </div>
+        <div>
+
+        </div>
       </div>
     );
   }

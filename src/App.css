@@ -3,156 +3,25 @@
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
-.moveDownG-enter {
-  transform: translateY(0rem);
-  position: relative;
-  z-index: 3;
-}
-.moveDownG-enter-active {
-  transform: translateY(5rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 3;
-}
-.moveDownG-exit {
-  transform: translateY(5rem);
-  position: relative;
-  z-index: 3;
-
-}
-.moveDownG-exit-active {
-  transform: translateY(0rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 3;
-
-}
-.moveDownY-enter {
-  transform: translateY(0rem);
-  position: relative;
-  z-index: 2;
-}
-.moveDownY-enter-active {
-  transform: translateY(5rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 2;
-}
-.moveDownY-exit {
-  transform: translateY(5rem);
-  position: relative;
-  z-index: 2;
-
-}
-.moveDownY-exit-active {
-  transform: translateY(0rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 2;
-
-}
-
-.moveDownB-enter {
-  transform: translateY(0rem);
-  position: relative;
-  z-index: 1;
-}
-.moveDownB-enter-active {
-  transform: translateY(5rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 1;
-}
-.moveDownB-exit {
-  transform: translateY(5rem);
-  position: relative;
-  z-index: 1;
-
-}
-.moveDownB-exit-active {
-  transform: translateY(0rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 1;
+ul {
+  list-style: none;
 }
 
 
-
-.moveUpR-enter {
-  transform: translateY(0rem);
-  position: relative;
-  z-index: 4;
+.message-enter {
+  opacity: 0;
 }
-.moveUpR-enter-active {
-  transform: translateY(-10rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 4;
+.message-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
 }
-.moveUpR-exit {
-  transform: translateY(-5rem);
-  position: relative;
-  z-index: 4;
-
+.message-exit {
+  opacity: 1;
 }
-.moveUpR-exit-active {
-  transform: translateY(0rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 4;
+.message-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
 }
-
-.moveUpG-enter {
-  transform: translateY(0rem);
-  position: relative;
-  z-index: 3;
-}
-.moveUpG-enter-active {
-  transform: translateY(-5rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 3;
-}
-.moveUpG-exit {
-  transform: translateY(-5rem);
-  position: relative;
-  z-index: 3;
-
-}
-.moveUpG-exit-active {
-  transform: translateY(0rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 3;
-}
-
-.moveUpY-enter {
-  transform: translateY(0rem);
-  position: relative;
-  z-index: 2;
-}
-.moveUpY-enter-active {
-  transform: translateY(-5rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 2;
-}
-.moveUpY-exit {
-  transform: translateY(-5rem);
-  position: relative;
-  z-index: 2;
-
-}
-.moveUpY-exit-active {
-  transform: translateY(0rem);
-  transition:  transform 500ms;
-  position: relative;
-  z-index: 2;
-}
-
-
-
-
 
 
 

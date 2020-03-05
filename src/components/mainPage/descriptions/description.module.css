@@ -1,0 +1,48 @@
+
+.titleRed{
+    font-family: "caveat";
+    color:red;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.subtitleRed{
+    font-family: "caveat";
+    color:red;
+    font-size: 1.3rem;
+}
+
+
+.titleGreen{
+    font-family: "caveat";
+    color:green;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.subtitleGreen{
+    font-family: "caveat";
+    color:green;
+    font-size: 1.3rem;
+}
+.titleYellow{
+    font-family: "caveat";
+    color:orange;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.subtitleYellow{
+    font-family: "caveat";
+    color:orange;
+    font-size: 1.3rem;
+}
+.titleBlue{
+    font-family: "caveat";
+    color:darkblue;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.subtitleBlue{
+    font-family: "caveat";
+    color:darkblue;
+    font-size: 1.3rem;
+}
