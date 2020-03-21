@@ -147,13 +147,38 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
             <>
                 <div className={styles.pageOne}>
                     <Drawer anchor={'left'} open={openDrawer}>
-                        <div  className={styles.closeWrapper}>
+                        <div className={styles.closeWrapper}>
                             <div onClick={this.closeDrawer} className={styles.closeButton}>
                                 <IoMdClose size={'2rem'} />
                             </div>
                         </div>
                         <div className={styles.drawer}>
-                            <a>Title</a>
+                            <div className={styles.titleWrapper}>
+                                <a className={styles.tableOfContent}>Table of content</a>
+                                <ul>
+                                    <li className={styles.Frontend} onClick={()=>this.props.history.push("/frontend")}>Frontend</li>
+                                    <li className={styles.Backend} onClick={()=>this.props.history.push("/backend")}>Backend</li>
+                                    <li className={styles.Database} onClick={()=>this.props.history.push("/database")}>Database</li>
+                                    <li className={styles.Devops} onClick={()=>this.props.history.push("/devops")}>Devops</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={styles.line}>
+                        </div>
+                        <div className={styles.aboutMeWrapper}>
+                            <h1 className={styles.aboutMe}>About Me</h1>
+                        </div>
+                        <div>
+                            <div className={styles.socialTitleWrapper}>
+                                <a className={styles.socialTitle}>Socials</a>
+                            </div>
+                            <div className={styles.socialsWrapper}>
+                                <div className={styles.icons}>
+                                    <IconContext.Provider value={{ color: "black" }}>
+                                        <FaGithub size={'3rem'} /> <FaLinkedin size={'3rem'} /> <FaMedium size={'3rem'} />
+                                    </IconContext.Provider>
+                                </div>
+                            </div>
                         </div>
                     </Drawer>
                     <div className={styles.floatingNav}>
@@ -200,19 +225,18 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
                                 <a className={styles.titleText}>I'm Kevin</a>
                             </div>
                             <div className={styles.descriptionWrap}>
-                                <a className={styles.descriptionText}>Honesty, integrity and hard work!</a><br />
-                                <a className={styles.descriptionText}>I started writing coding since I was 16 and I'm pretty good at making software</a><br />
-                                <a className={styles.descriptionText}>Writing clean code from the inside out is what I pride myself on</a>
-                            </div>
-
-                            <div className={styles.socialsWrapper}>
-                                <div className={styles.icons}>
-                                    <IconContext.Provider value={{ color: "black" }}>
-                                        <FaGithub size={'3rem'} /> <FaLinkedin size={'3rem'} /> <FaMedium size={'3rem'} />
-                                    </IconContext.Provider>
-
+                                <div className={styles.textWrapper}>
+                                    <a className={styles.descriptionText}>Honesty, integrity and hard work</a><br />
+                                </div>
+                                <div className={styles.textWrapper}>
+                                    <a className={styles.descriptionText}>I started writing coding since I was 16 and I'm pretty good at making software</a><br />
+                                </div>
+                                <div className={styles.textWrapper}>
+                                    <a className={styles.descriptionText}>Writing clean code from the inside out is what I pride myself on</a>
                                 </div>
                             </div>
+
+
                         </div>
                         <div className={styles.stack}>
 

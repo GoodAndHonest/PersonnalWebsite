@@ -43,23 +43,24 @@
     font-size: 2.5rem;
 }
 .descriptionText{
-    font-style: italic;
+    font-family: "Roboto";
     color:black;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 .descriptionWrap{
     margin-top: 3rem;
 }
+.textWrapper{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 .icons{
-    width: 10rem;
+    padding-left: 4rem;
+    text-align: center;
+    width: 70%;
     display: inline-grid;
     grid-template-columns: 33% 33% 33%;
-    margin-top: 13rem;
-}
-.line{
-    margin-top: 2rem;
-    border-top:2px solid black;
-    width: 30rem;
 }
     @keyframes loop1infinite{
     0% {transform: translateY(-0.33rem); position: relative; z-index: 4;}
@@ -427,4 +428,81 @@
 }
 .closeButton:hover{
     cursor: pointer;
+}
+.titleWrapper{
+    text-align: center;
+}
+.tableOfContent{
+    padding-top: 4rem;
+    font-family: "caveat";
+    font-size: 2rem;
+}
+.Frontend{
+    padding:1rem;
+    font-family: "caveat";
+    font-size: 1.5rem;
+}
+.Frontend:hover{
+    color: red;
+    cursor: pointer;
+    transform: 0.3s;
+}
+.Backend{
+    padding:1rem;
+    font-family: "caveat";
+    font-size: 1.5rem;
+}
+.Backend:hover{
+    color: green;
+    cursor: pointer;
+    transform: 0.3s;
+}
+.Database{
+    padding:1rem;
+    font-family: "caveat";
+    font-size: 1.5rem;
+}
+.Database:hover{
+    color: orange;
+    cursor: pointer;
+    transform: 0.3s;
+}
+.Devops{
+    padding:1rem;
+    font-family: "caveat";
+    font-size: 1.5rem;
+}
+.Devops:hover{
+    color: blue;
+    cursor: pointer;
+    transform: 0.3s;
+}
+.line{
+    margin:0 auto;
+    margin-top: 2rem;
+    border-top:1px solid black;
+    width: 80%;
+}
+.socialTitleWrapper{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.aboutMe{
+    font-family: "caveat";
+    font-size: 2rem;
+}
+.aboutMe:hover{
+    cursor: pointer;   
+    text-decoration: underline; 
+    transition: 2s;
+}
+.socialTitle{
+    padding-top: 4rem;
+    font-family: "caveat";
+}
+.aboutMeWrapper{
+    text-align: center;
+    margin-bottom: 4rem;
 }
