@@ -2,13 +2,7 @@ import * as React from 'react';
 import styles from './main.module.css'
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { Button, Popover, Position, Tooltip, Intent } from "@blueprintjs/core";
 
-import ReactTooltip from 'react-tooltip';
-
-import { Popup } from 'semantic-ui-react'
-
-import { ArcherContainer, ArcherElement } from 'react-archer';
 
 import { CSSTransition } from 'react-transition-group';
 
@@ -19,6 +13,7 @@ export interface IMainPageProps {
 
 
 export interface IMainPageState {
+    showHello: boolean,
     showMessage: boolean,
     activeRed: boolean,
     activeGreen: boolean,
@@ -31,6 +26,7 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
     constructor(props: IMainPageProps) {
         super(props);
         this.state = {
+            showHello: false,
             showMessage: false,
             activeRed: false,
             activeGreen: false,
@@ -39,12 +35,15 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
         }
     }
     componentDidMount() {
+        this.setState({
+            showHello: true,
+        })
         setTimeout(
             () => {
                 this.setState({
                     showMessage: true
                 })
-            }, 6000);
+            }, 1000);
 
     }
     active = async (name: string) => {
@@ -129,7 +128,7 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
         return (
             <>
 
-                <div className={activeRed ? styles.frontendWrapper : styles.Hide}
+                <div className={activeRed ? styles.frontendWrapper : styles.hideStackPadding}
                 >
                     <Frontend active={this.state.activeRed} />
                 </div>
@@ -142,28 +141,32 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
                 <div className={activeBlue ? styles.devopsWrapper : styles.Hide}>
                     <Devops active={this.state.activeBlue} />
                 </div>
-                <div className={styles.backgroundVideo}>
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        className={styles.fullscreenVideoWrap}>
-                        <source src="Cart.mp4" type="video/mp4" />
-                        <img src="logo192.png" width="400" height="300" />
-                    </video>
+                <div className={styles.backgroundRed}>
+                    <div className={styles.backgroundVideo}>
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            className={styles.fullscreenVideoWrap}>
+                            <source src="Cart.mp4" type="video/mp4" />
+                            <img src="logo192.png" width="400" height="300" />
+                        </video>
+                    </div>
                 </div>
+
                 <div className={styles.mainContent}>
                     <div className={styles.description}>
                         <div className={styles.name}>
                             <h1 className={styles.nameText}>Hello.</h1>
                         </div>
+
                         <div className={styles.title}>
                             <a className={styles.titleText}>I'm called Kevin</a>
                         </div>
                         <div className={styles.descriptionWrap}>
-                            <a className={styles.descriptionText}>Im a fullstack developper with 3 years experience</a><br />
-                            <a className={styles.descriptionText}>I'm pretty good at everything and I'd love to start working for you</a><br />
-                            <a className={styles.descriptionText}>Writing clean code from the inside out is what i do</a>
+                            <a className={styles.descriptionText}>Honesty, integrity and hard work!</a><br />
+                            <a className={styles.descriptionText}>I started writing coding since I was 16 and I'm pretty good at making software</a><br />
+                            <a className={styles.descriptionText}>Writing clean code from the inside out is what I pride myself on</a>
                         </div>
 
                         <div className={styles.socialsWrapper}>
@@ -180,11 +183,11 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
 
                         <div className={styles.stackWrapper}>
                             <CSSTransition
-                                in={false}
-                                timeout={500}
+                                in={this.state.showMessage}
+                                timeout={2000}
                                 classNames="message"
                             >
-                                <div className={styles.padding}>
+                                <div className={this.state.showMessage ? styles.stackPadding : styles.stackPaddingHidden}>
                                     <h1 className={styles.stackTitle}>Check out my stack! &darr;</h1>
                                 </div>
                             </CSSTransition>
@@ -208,7 +211,8 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
                                     onMouseEnter={() => {
                                         this.active('activeGreen')
                                     }}
-                                    onMouseLeave={this.disActive}>
+                                    onMouseLeave={this.disActive}
+                                    onClick={() => { this.props.history.push("/backend") }}>
                                     <div className={styles.squaregreen3}></div>
                                     <div className={styles.bottomSeperator}>
                                         <div className={styles.squaregreen1}></div>
@@ -222,7 +226,8 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
                                 onMouseEnter={() => {
                                     this.active('activeYellow')
                                 }}
-                                onMouseLeave={this.disActive}>
+                                onMouseLeave={this.disActive}
+                                onClick={() => { this.props.history.push("/database") }}>
                                 <div className={styles.squareYellow3}></div>
                                 <div className={styles.bottomSeperator}>
                                     <div className={styles.squareYellow1}></div>
@@ -234,7 +239,8 @@ export default class MainPage extends React.Component<IMainPageProps, IMainPageS
                                 onMouseEnter={() => {
                                     this.active('activeBlue')
                                 }}
-                                onMouseLeave={this.disActive}>
+                                onMouseLeave={this.disActive}
+                                onClick={() => { this.props.history.push("/Devops") }}>
                                 <div className={styles.squareBlue3}></div>
                                 <div className={styles.bottomSeperator}>
                                     <div className={styles.squareBlue1}></div>

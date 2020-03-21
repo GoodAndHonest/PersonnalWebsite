@@ -1,10 +1,21 @@
 
-@import "~normalize.css";
-@import "~@blueprintjs/core/lib/css/blueprint.css";
-@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
-
 ul {
   list-style: none;
+}
+
+.transition-enter {
+  opacity: 0;
+}
+.transition-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms;
+}
+.transition-exit {
+  opacity: 1;
+}
+.transition-exit-active {
+  opacity: 0;
+  transition: opacity 5000ms;
 }
 
 
@@ -13,14 +24,14 @@ ul {
 }
 .message-enter-active {
   opacity: 1;
-  transition: opacity 500ms;
+  transition: opacity 1500ms;
 }
 .message-exit {
   opacity: 1;
 }
 .message-exit-active {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 1500ms;
 }
 
 

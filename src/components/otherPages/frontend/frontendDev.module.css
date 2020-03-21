@@ -1,0 +1,142 @@
+.backgroundColor{
+    background-color: #FAFAFA;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top:5rem;
+}
+.bigTitle{
+    margin-bottom: 3rem;
+}
+.projectWrapper{
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.projectsTitle{
+    font-size: 4rem;
+    font-family: "caveat";
+}
+.frontendTitle{
+    font-family: "caveat";
+    font-size: 2rem;
+}
+.bigTitle{
+    animation: 
+    titleAnimation 1s;
+}
+.titleWrapper{
+    animation: 
+    titleAnimation 2s;
+}
+@keyframes titleAnimation{
+    0%   { opacity:0; position: relative; z-index: 4;}
+    60%  { opacity:0; position: relative; z-index: 4;}
+    100% { opacity:1; position: relative; z-index: 4;} 
+    }
+.bigTitle{
+    width: 100%;
+    text-align: center;
+}
+.projectsGrid{
+    margin-left: -3rem;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.boxRed0{
+    margin-top: 7rem;
+    z-index: 3;
+    animation: 
+    appear0 3s ,
+    loop1infinite 10s 4s infinite ;
+    transition: 1s;
+}
+.boxRed0:hover{
+    z-index: 3;
+    margin-top: 5rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+@keyframes appear0{
+    0%   {transform: translateY(-12rem); position: relative; z-index: 4;}
+    75%  {transform: translateY(0.5rem); position: relative; z-index: 4;}
+    100% {transform: translateY(0rem); position: relative; z-index: 4;} 
+    }
+.boxRed1{
+    margin-top: 7rem;
+    z-index: 2;
+    animation: 
+    appear1 4s ,
+    loop1infinite 10s 4s infinite ;
+    transition: 1s;
+}
+.boxRed1:hover{
+    z-index: 2;
+    margin-top: 5rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+@keyframes appear1{
+    0%   {transform: translateY(-12rem); position: relative; z-index: 4;}
+    75%  {transform: translateY(0.5rem); position: relative; z-index: 4;}
+    100% {transform: translateY(0rem); position: relative; z-index: 4;} 
+    }
+.boxRed2{
+    margin-top: 7rem;
+    z-index: 1;
+    animation: 
+    appear2 5s ,
+    loop1infinite 10s 4s infinite ;
+    transition: 1s;
+}
+.boxRed2:hover{
+    z-index: 1;
+    margin-top: 5rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+@keyframes appear2{
+    0%   {transform: translateY(-12rem); position: relative; z-index: 4;}
+    75%  {transform: translateY(0.5rem); position: relative; z-index: 4;}
+    100% {transform: translateY(0rem); position: relative; z-index: 4;} 
+    }
+.topBoxRed{
+    background-color: #EA4F50;
+    border:1px solid #EB6A6D;
+    height: 5rem;
+    width: 20rem;
+    margin: 0rem;
+    margin-left: 10rem;
+    transform: rotate(-0deg) translate(-45px, -65px) skew(49deg, 0deg);
+    position: absolute;
+}
+
+.leftBoxRed{
+    margin: 0rem;
+    background-color: #BD3128;
+    border:1px solid #EB6A6D;
+    height: 17.4rem;
+    width: 7.5rem;
+    margin-left: 10rem;
+    transform: rotate(30deg) translate(-90px, 50px) skew(30deg, 10deg);
+    position: absolute;
+}
+.projectWrapperRed{
+    padding-top: 5rem;
+    background-color: #EA5455;
+    border:1px solid #EB6A6D;
+    height: 15rem;
+    width: 20rem;
+    margin: 0rem;
+    position: absolute;
+    margin-left: 10rem;
+    transform: translate(5px, 17px) ;
+}
+.titleBox{
+    color: white;
+    font-weight: bold;
+}
+
+.box{
+}

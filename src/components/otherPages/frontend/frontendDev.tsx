@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './frontendev.module.css'
+import styles from './frontendDev.module.css'
 export interface IFrontendDevProps {
 }
 
@@ -16,13 +16,57 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
 
   public render() {
     return (
-      <div>
-        <div className={styles.firstDiv}>
-            <h1></h1>
+      <div className={styles.backgroundColor}>
+        <div className={styles.titleAnimation}>
+          <div className={styles.bigTitle}>
+            <a className={styles.projectsTitle}>Frontend</a>
+          </div>
+          <div className={styles.titleWrapper}>
+            <a className={styles.frontendTitle}>Heres some project to showcase my knowledge</a>
+          </div>
         </div>
-        <div>
+        <div className={styles.projectsGrid}>
+          <div className={styles.boxRed0}>
+            <div className={styles.topBoxRed}>
+
+            </div>
+            <div className={styles.leftBoxRed}>
+
+            </div>
+            <div className={styles.projectWrapperRed}>
+              <a className={styles.titleBox}>Animated SVG Project</a>
+            </div>
+
+          </div>
+
+          <div className={styles.boxRed1}>
+            <div className={styles.topBoxRed}>
+
+            </div>
+            <div className={styles.leftBoxRed}>
+
+            </div>
+            <div className={styles.projectWrapperRed}>
+              <a className={styles.titleBox}>Setup React Without Create React App</a>
+            </div>
+
+          </div>
+
+          <div className={styles.boxRed2}>
+            <div className={styles.topBoxRed}>
+
+            </div>
+            <div className={styles.leftBoxRed}>
+
+            </div>
+            <div className={styles.projectWrapperRed}>
+              <a className={styles.titleBox}>WebGl Project</a>
+            </div>
+
+          </div>
 
         </div>
+
       </div>
     );
   }

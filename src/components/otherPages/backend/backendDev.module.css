@@ -1,0 +1,174 @@
+.backgroundColor{
+    background-color: #FAFAFA;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top:5rem;
+}
+.bigTitle{
+    margin-bottom: 3rem;
+}
+.projectWrapper{
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.projectsTitle{
+    font-size: 4rem;
+    font-family: "caveat";
+}
+.frontendTitle{
+    font-family: "caveat";
+    font-size: 2rem;
+}
+.bigTitle{
+    animation: 
+    titleAnimation 2s;
+}
+.titleWrapper{
+    animation: 
+    titleAnimation 2s;
+}
+@keyframes titleAnimation{
+    0%   { opacity:0; position: relative; z-index: 4;}
+    100% { opacity:1; position: relative; z-index: 4;} 
+    }
+.bigTitle{
+    width: 100%;
+    text-align: center;
+}
+.boxWrapper1{
+    margin-top: 1rem;
+}
+.boxTop{
+    width: 30rem;
+    height: 5rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:rgb(0, 163, 57);
+    transform: rotate(0deg) translate(0px, 0px) skew(50deg, 0deg);
+    margin-left: 35rem;
+    z-index: 3;
+}
+.BoxBottom{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    margin-left: 10rem;
+    z-index: 3;
+}
+.boxLeft{
+    order: 1; 
+    height: 3.5rem;
+    width: 8rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:#2D5D22;
+    position: absolute;
+    margin-left: 30rem;
+    margin-top: -0.7rem;
+    transform: rotate(30deg) translate(-0px, -30px) skew(30deg, 10deg);
+    z-index: 3;
+}
+.boxRight{
+    order: 2; 
+    height: 4rem;
+    width: 30rem;
+    margin-left: 38rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:#54A43B;
+    position: absolute;
+    transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+    z-index: 3;
+}
+.boxWrapper2{
+    z-index: 2;
+    animation: slideLeft 4s;
+}
+@keyframes slideleft{
+    0%   {transform: translateY(-12rem); position: relative;z-index: 2;}
+    75%  {transform: translateY(1em); position: relative; z-index: 2;}
+    100% {transform: translateY(0rem); position: relative; z-index: 2;}
+}
+.boxTop2{
+    width: 30rem;
+    height: 5rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:#54A43B;
+    transform: rotate(0deg) translate(0px, 0px) skew(50deg, 0deg);
+    margin-left: 35rem;
+    z-index: 2;
+
+}
+.BoxBottom2{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    margin-left: 10rem;
+    z-index: 2;
+
+}
+.boxLeft2{
+    order: 1; 
+    height: 3.5rem;
+    width: 8rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:#2D5D22;
+    position: absolute;
+    margin-left: 30rem;
+    margin-top: -0.7rem;
+    transform: rotate(30deg) translate(-0px, -30px) skew(30deg, 10deg);
+    z-index: 2;
+
+}
+.boxRight2{
+    order: 2; 
+    height: 4.1rem;
+    width: 30rem;
+    margin-left: 38rem;
+    background-color:#54A43B;
+    border:solid 1px rgb(0, 128, 85);
+    position: absolute;
+    transform: rotate(0deg) translate(2px, 0px) skew(0deg, 0deg);
+    z-index: 2;
+
+}
+.boxWrapper3{
+    z-index: 1;
+}
+.boxTop3{
+    width: 30rem;
+    height: 5rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:rgb(0, 163, 57);
+    transform: rotate(0deg) translate(0px, 0px) skew(50deg, 0deg);
+    margin-left: 35rem;
+}
+.BoxBottom3{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    margin-left: 10rem;
+    
+}
+.boxLeft3{
+    order: 1; 
+    height: 3.3rem;
+    width: 8rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:#2D5D22;
+    position: absolute;
+    margin-left: 30rem;
+    margin-top: -0.7rem;
+    transform: rotate(30deg) translate(-0px, -30px) skew(30deg, 10deg);
+}
+.boxRight3{
+    order: 2; 
+    height: 4rem;
+    width: 30rem;
+    margin-left: 38rem;
+    border:solid 1px rgb(0, 128, 85);
+    background-color:#54A43B;
+    position: absolute;
+    transform: rotate(0deg) translate(2px, 0px) skew(0deg, 0deg);
+}
