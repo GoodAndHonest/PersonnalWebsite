@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styles from './frontendDev.module.css'
+import {FaArrowLeft} from "react-icons/fa";
+
 export interface IFrontendDevProps {
 }
 
@@ -17,6 +19,9 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
   public render() {
     return (
       <div className={styles.backgroundColor}>
+        <div>
+          <FaArrowLeft />
+        </div>
         <div className={styles.titleAnimation}>
           <div className={styles.bigTitle}>
             <a className={styles.projectsTitle}>Frontend</a>
@@ -60,7 +65,7 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
 
             </div>
             <div className={styles.projectWrapperRed}>
-              <a className={styles.titleBox}>WebGl Project</a>
+              <a className={styles.titleBox}>Landing Page</a>
             </div>
 
           </div>

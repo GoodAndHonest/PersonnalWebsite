@@ -10,10 +10,21 @@
     background-size: cover;
     overflow: hidden;
 }
+.pageOne{
+    height: 100vh;
+}
 .mainContent{
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.floatingNav{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+}
+.text{
+    font-family: 'Roboto';
+    font-size: 1.1rem;
 }
 .description{
     margin-top:3rem;
@@ -106,11 +117,6 @@
     loop1infinite 10s 4s infinite ;
     transition: 1s;
 }
-.mainDiv1:hover{
-    padding-bottom:3rem;
-    transition: 0.5s;
-    cursor:pointer;
-}
 .mainDiv2{
     animation: 
     div2 3s ,
@@ -118,6 +124,12 @@
     margin-top: -3rem;
     transition: 1s;
 }
+.mainDiv1:hover{
+    padding-bottom:3rem;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
 .mainDiv2:hover{
     padding-bottom:4rem;
     transition: 0.5s;
@@ -193,6 +205,25 @@
     display: inline-grid;
     grid-template-columns: 50% 50%;
 }
+
+.employment:hover{
+    background-color: gray;
+    cursor: pointer;
+    width: 15rem;
+    border: 4px solid black;
+    text-align: center;
+    padding-top: 0.7rem;
+    transition: 0.3s;
+}
+.cvWrapper:hover{
+    background-color: gray;
+    cursor: pointer;
+    width: 15rem;
+    border: 4px solid black;
+    text-align: center;
+    padding-top: 0.7rem;
+    transition: 0.3s;
+}
 .squaregreen1{
     width:150px;
     height:40px;
@@ -238,6 +269,12 @@
   transform: skew(180deg,150deg);
   position: relative;
 
+}
+.menuWrapper{
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
 .squareBlue3{
     width:174px;
@@ -328,4 +365,66 @@
 .hideTitle{
     display: none;
     visibility: hidden;
+}
+.cvWrapper{
+    margin-top: 1rem;
+}
+.employment{
+    margin-top: 1rem;
+}
+.pageTwo{
+    height: 70vh;
+    background-color: white;
+}
+.contact{
+    margin-top: 5rem;
+}
+.contactName{
+    padding-left: 20%;
+    width: 60%;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.name{
+    width: 100%;
+}
+.email{
+    margin-left: 3rem;
+}
+.contactTitle{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contactText{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+}
+.titleWrap{
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+}
+.title{
+    font-size: 3rem;
+    font-family: "caveat";
+}
+.closeWrapper{
+    width: 20rem;
+    height: 2rem;
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.closeButton{
+    float: right;
+    width: 2rem;
+}
+.closeButton:hover{
+    cursor: pointer;
 }

@@ -25,6 +25,8 @@
     titleAnimation 2s;
 }
 .bottomWrapper{
+    margin-left: 14.5rem;
+    width: 20rem;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,28 +38,34 @@
     position: 2;
 }
 .topYellow{
-    background-color: orange;
-    border: 1px solid white;
+    border: 1px solid #E09945;
+    background-color: #F5C547;
     height: 1rem;
-    width: 10rem;
-    transform: rotate(180deg) translate(-155px, -45px) skew(20deg, 0deg);
-    margin-left: 35rem;
+    width: 10.1rem;
+    transform: rotate(180deg) translate(-148px, -45px) skew(25deg, 0deg);
+    margin-left: 10rem;
     position: absolute;
 }
 .leftYellow{
-    background-color: orange;
-    border: 1px solid white;
+    border: 1px solid #E09945;
+    background-color: #E09945;
     height: 8.7rem;
     width: 1rem;
     margin-top: 5.4rem;
-    transform: rotate(30deg) translate(-30px, -25px) skew(30deg, 40deg);
+    transform: rotate(30deg) translate(-30px, -25px) skew(30deg, 35deg);
     position: absolute;
 }
 .frontYellow{
-    background-color: orange;
-    border: 1px solid white;
+    border: 1px solid #E09945;
+    background-color: #F5C547;
     height: 10rem;
     width: 10rem;
     margin-top: 3rem;
     position: absolute;
+}
+.boxWrapper{
+}
+.divider{
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

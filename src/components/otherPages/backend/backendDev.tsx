@@ -25,7 +25,7 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
             <a className={styles.frontendTitle}>Algorithms,datastructures and other cool stuff</a>
           </div>
         </div>
-        <div>
+        <div className={styles.boxWrapper}>
           <div className={styles.boxWrapper1}>
             <div className={styles.boxTop}>
             </div>
@@ -34,6 +34,7 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
 
               </div>
               <div className={styles.boxRight}>
+                <a className={styles.title}>C++ blackjack</a>
               </div>
             </div>
           </div>
@@ -45,6 +46,7 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
 
               </div>
               <div className={styles.boxRight2}>
+                <a className={styles.title}>Pathfinding Mazes</a>
               </div>
             </div>
           </div>
@@ -55,13 +57,11 @@ export default class FrontendDev extends React.Component<IFrontendDevProps, IFro
               <div className={styles.boxLeft3}>
               </div>
               <div className={styles.boxRight3}>
-
+                <a className={styles.title}>Sorting Algorithms</a>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     );
   }
