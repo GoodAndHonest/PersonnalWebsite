@@ -92,6 +92,7 @@ router.get('/getBookInfo', (req, res) => {
 
 router.get('/getPageFilter', (req, res) => {
   connection.query('SELECT * FROM books JOIN authors ON books.author = authors.id WHERE pages>299', (error, results) => {
+    console.log("res:",results)
     if (error)
       res.status(400).json('Problems with database please try again')
     else
@@ -100,6 +101,7 @@ router.get('/getPageFilter', (req, res) => {
 })
 router.get('/getAuthorFilter', (req, res) => {
   connection.query('SELECT * FROM books JOIN authors ON books.author = authors.id WHERE author=7', (error, results) => {
+    console.log(results)
     if (error)
       res.status(400).json('Problems with database please try again')
     else
