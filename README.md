@@ -1,6 +1,6 @@
 # The ONLY solid fullstack developer your team fully rely on
 
- IMAGE OF THE STACK
+![Stack](https://github.com/CanadianLabor/PersonnalWebsiteFrontend/blob/main/public/Screen%20Shot%202020-12-13%20at%2010.52.45%20AM.png?raw=true)
 
 
 By taking a look at my freshly polished website. I hope that you will gain insights in why i breezed through all 3 of my interships.
