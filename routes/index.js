@@ -21,27 +21,17 @@ router.get('/', function (req, res, next) {
 
 //error checking included in the backend for showing purposes, usually i would include this in the frontend less $ spent
 router.post('/sendMessage', [
-  check('name', 'name must be written').isLength({ min: 1 }),
-  check('title', 'Theres no title!').isLength({ min: 1 }),
-  check('email', 'Im missing your email :(').isEmail().normalizeEmail(),
+  check('name', 'Your name must be included').isLength({ min: 1 }),
+  check('title', 'Theres no title').isLength({ min: 1 }),
+  check('email', 'Im missing your email').isEmail().normalizeEmail(),
   check('message', 'Say something in your message').isLength({ min: 5 }),
 ],
   function (req, res) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      console.log('hit')
+      console.log("errors:", errors.array());
       return res.status(400).json(errors.array());
     } else {
-      /**
-       * Checks if message was sent succesfully
-       * @param {String} infoMessage
-       * 
-       */
-      function checkEmailEmail(infoMessage) {
-        if (infoMessage != null) {
-          res.status(200).json('successfully sent')
-        }
-      }
       /**
        * 
        * Send the email to keviny4n@hotmail.com
@@ -56,27 +46,42 @@ router.post('/sendMessage', [
 
       async function sendMail(firstName, email, title, message) {
 
-        //Lets us a test account for my website
-        let testAccount = await nodemailer.createTestAccount();
-        //Create a transport
-        var transporter = nodeMailer.createTransport(sender + ':' + password + '@smtp.gmail.com');
-
-
+        var transporter = nodemailer.createTransport({
+          service: 'Gmail',
+          port: 465,
+          auth: {
+            user: 'keviny4n@gmail.com',
+            pass: 'Windowxp668202$'
+          }
+        });
         //Sending the email
         let info = await transporter.sendMail({
           from: firstName + '<' + email + '>',
-          to: "keviny4n@hotmail.com",
+          to: "keviny4n@gmail.com",
           subject: title,
           text: message,
+        }, (err, response) => {
+          if (err) {
+            res.status(400).json('problems on our end. You can still send me an email at keviny4n@gmail.com');
+          }
+          if (response) {
+            res.status(200).json('sucessfully sent. Talk to you soon!');
+          }
+          else return
         });
-        await checkEmailEmail(info.messageId)
       }
 
       const { firstName, email, title, message } = req.body
 
       sendMail(firstName, email, title, message).catch((error) => {
-        console.log("error:", error);
-        res.status(400).json('ruht roh problems on our end');
+        if (error) {
+          console.log('hit')
+          res.status(400).json('ruht roh problems on our end')
+        }
+        else {
+          console.log('hit')
+          res.status(200).json('message send succesfully we will get in touch soon')
+        }
       });
     }
   })
@@ -92,7 +97,7 @@ router.get('/getBookInfo', (req, res) => {
 
 router.get('/getPageFilter', (req, res) => {
   connection.query('SELECT * FROM books JOIN authors ON books.author = authors.id WHERE pages>299', (error, results) => {
-    console.log("res:",results)
+    console.log("res:", results)
     if (error)
       res.status(400).json('Problems with database please try again')
     else
@@ -102,10 +107,14 @@ router.get('/getPageFilter', (req, res) => {
 router.get('/getAuthorFilter', (req, res) => {
   connection.query('SELECT * FROM books JOIN authors ON books.author = authors.id WHERE author=7', (error, results) => {
     console.log(results)
-    if (error)
+    if (error) {
+      console.log('hit')
       res.status(400).json('Problems with database please try again')
-    else
+    }
+    else {
+      console.log('hit')
       res.status(200).json(results);
+    }
   })
 })
 module.exports = router;

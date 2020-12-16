@@ -1,9 +1,9 @@
-# The ONLY solid fullstack developer your team fully rely on
+# A great developer you can rely on!
 
 ![Stack](https://github.com/CanadianLabor/PersonnalWebsiteFrontend/blob/main/public/Screen%20Shot%202020-12-13%20at%2010.52.45%20AM.png?raw=true)
 
 
-By taking a look at my freshly polished website. I hope that you will gain insights in why i breezed through all 3 of my interships.
+By taking a look at my freshly created website. I hope that you will gain insights on why I will be a great addition to your team
 
 The portfolio is separated in 4 parts which symbolizes each with their own creative projects
 
