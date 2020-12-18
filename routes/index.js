@@ -1,16 +1,26 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
+require('dotenv').config();
+
+const gmailUsername = process.env.GMAIL_LOGIN_EMAIL;
+const gmailPassword = process.env.GMAIL_LOGIN_PASSWORD;
+
+const MYSQLHOST = process.env.MYSQL_HOST
+const MYSQLUSER = process.env.MYSQL_USER
+const MYSQLPASSWORD = process.env.MYSQL_PASSWORD;
+const MYSQLDATABASE = process.env.MYSQL_DATABASE;
+
 const connection = mysql.createConnection({
-  host: 'de1tmi3t63foh7fa.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-  user: 'in8bjremogpis4xu',
-  password: 'b5xllbh21uxjjowo',
-  database: 'zb8blaa08dsktf83'
+  host: MYSQLHOST,
+  user: MYSQLUSER,
+  password: MYSQLPASSWORD,
+  database: MYSQLDATABASE
 });
 connection.connect();
 
-const sender = 'francoisng978%40gmail.com'
-const password = 'oneMillie123$'
+const email = process.env.GMAIL_LOGIN_EMAIL;
+const password = process.env.GMAIL_LOGIN_PASSWORD;
 
 const nodemailer = require("nodemailer");
 const { check, validationResult } = require('express-validator');
@@ -45,13 +55,14 @@ router.post('/sendMessage', [
        */
 
       async function sendMail(firstName, email, title, message) {
-
+        console.log("gmailUsername:", gmailUsername);
+        console.log("gmailPassword:", gmailPassword);
         var transporter = nodemailer.createTransport({
           service: 'Gmail',
           port: 465,
           auth: {
-            user: 'keviny4n@gmail.com',
-            pass: 'Windowxp668202$'
+            user: gmailUsername,
+            pass: gmailPassword
           }
         });
         //Sending the email
@@ -62,6 +73,7 @@ router.post('/sendMessage', [
           text: message,
         }, (err, response) => {
           if (err) {
+            console.log("err:", err)
             res.status(400).json('problems on our end. You can still send me an email at keviny4n@gmail.com');
           }
           if (response) {
