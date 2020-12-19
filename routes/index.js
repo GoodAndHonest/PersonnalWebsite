@@ -65,11 +65,12 @@ router.post('/sendMessage', [
         //Sending the email
         let info = await transporter.sendMail({
           from: firstName + '<' + email + '>',
-          to: "keviny4n@gmail.com",
+          to: "sunnyhachem@gmail.com",
           subject: title,
           text: message,
         }, (err, response) => {
           if (err) {
+            console.log("err:",err);
             res.status(400).json('problems on our end. You can still send me an email at keviny4n@gmail.com');
           }
           if (response) {
