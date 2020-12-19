@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
+
 require('dotenv').config();
 
 const gmailUsername = process.env.GMAIL_LOGIN_EMAIL;
@@ -19,8 +20,7 @@ const connection = mysql.createConnection({
 });
 connection.connect();
 
-const email = process.env.GMAIL_LOGIN_EMAIL;
-const password = process.env.GMAIL_LOGIN_PASSWORD;
+
 
 const nodemailer = require("nodemailer");
 const { check, validationResult } = require('express-validator');
@@ -39,7 +39,6 @@ router.post('/sendMessage', [
   function (req, res) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      console.log("errors:", errors.array());
       return res.status(400).json(errors.array());
     } else {
       /**
@@ -55,8 +54,6 @@ router.post('/sendMessage', [
        */
 
       async function sendMail(firstName, email, title, message) {
-        console.log("gmailUsername:", gmailUsername);
-        console.log("gmailPassword:", gmailPassword);
         var transporter = nodemailer.createTransport({
           service: 'Gmail',
           port: 465,
@@ -73,7 +70,6 @@ router.post('/sendMessage', [
           text: message,
         }, (err, response) => {
           if (err) {
-            console.log("err:", err)
             res.status(400).json('problems on our end. You can still send me an email at keviny4n@gmail.com');
           }
           if (response) {
@@ -87,11 +83,9 @@ router.post('/sendMessage', [
 
       sendMail(firstName, email, title, message).catch((error) => {
         if (error) {
-          console.log('hit')
           res.status(400).json('ruht roh problems on our end')
         }
         else {
-          console.log('hit')
           res.status(200).json('message send succesfully we will get in touch soon')
         }
       });
@@ -109,7 +103,6 @@ router.get('/getBookInfo', (req, res) => {
 
 router.get('/getPageFilter', (req, res) => {
   connection.query('SELECT * FROM books JOIN authors ON books.author = authors.id WHERE pages>299', (error, results) => {
-    console.log("res:", results)
     if (error)
       res.status(400).json('Problems with database please try again')
     else
@@ -118,13 +111,10 @@ router.get('/getPageFilter', (req, res) => {
 })
 router.get('/getAuthorFilter', (req, res) => {
   connection.query('SELECT * FROM books JOIN authors ON books.author = authors.id WHERE author=7', (error, results) => {
-    console.log(results)
     if (error) {
-      console.log('hit')
       res.status(400).json('Problems with database please try again')
     }
     else {
-      console.log('hit')
       res.status(200).json(results);
     }
   })
